@@ -1,5 +1,5 @@
 from django.shortcuts import render,resolve_url, redirect
-from django.http import HttpResponse,HttpResponseRedirect
+from django.http import HttpResponse,HttpResponseRedirect,HttpResponseServerError
 from django.views.generic import TemplateView,CreateView,DetailView,UpdateView,DeleteView,ListView
 from .models import Post,Like,Category
 from django.urls import reverse_lazy
@@ -12,6 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.core.paginator import Paginator
+from django.views.decorators.csrf import requires_csrf_token
 
 
 class OnlyMyPostMinin(UserPassesTestMixin):
@@ -163,4 +164,11 @@ def Search(request):
             'search_list':search_list,
         }
         return render(request, 'app/search.html',params)
+
+@requires_csrf_token
+def my_customized_server_error(request, template_name='500.html'):
+    import sys
+    from django.views import debug
+    error_html = debug.technical_500_response(request, *sys.exc_info()).content
+    return HttpResponseServerError(error_html)
 
