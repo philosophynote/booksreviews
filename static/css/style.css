@@ -1,0 +1,95 @@
+
+.bg-image{
+    height:300px;
+}
+
+body{
+    background-image: url("../img/library.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+
+}
+
+.container{
+  color: white;
+}
+
+.card{
+  color: black;
+}
+
+.table{
+  background-color:#fff;
+  border:1px solid rgba(0,0,0,.125); 
+  border-radius:.25rem
+}
+
+.pagination{
+  display:flex;
+  justify-content: space-around;
+  background-color:#fff;
+  border:1px solid rgba(0,0,0,.125); 
+  border-radius:.25rem;
+  padding:0 auto;
+}
+
+a .btn-lg{
+    margin: 5% auto;
+}
+
+
+.FavIcon-fa-heart{
+    content:"\f004";
+    color:black;
+}
+
+.FavIcon-fa-heart.favorite{
+    content:"\f004";
+    color:pink;
+    animation: heartAnimation .2s;
+}
+
+p .fav-count{
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+/* ---------------------------- */
+/* --- ハートアニメーション --- */
+/* ---------------------------- */
+@keyframes heartAnimation {
+  0% {
+    /* アイコンサイズをもとのより小さくする */
+    transform: scale(0.5);
+  }
+  10% {
+    transform: scale(0.7);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    /* もとのサイズに戻す */
+    transform: scale(1.0);
+  }
+}
+
+a .express{
+  margin-top: 10%;
+}
+
+.c-detail{
+  background-color:#fff;
+  border:1px solid rgba(0,0,0,.125); 
+  border-radius:.25rem;
+}
+
