@@ -43,4 +43,34 @@
   </div>
   <br>
 </section>
+<script>
+  var co_num = 0;
+    $("#color-change").on("click", function () {
+      var last_co_num=co_num
+      if(last_co_num>=1){
+        $(".card-color").removeClass("bg-success");
+        $(".card-color").removeClass("bg-danger");
+        $(".card-color").removeClass("bg-info");
+        $(".card-color").removeClass("bg-warning");
+      }
+      co_num = Math.ceil(Math.random() * 4);
+      console.log(co_num);
+      if (co_num == 1) {
+        $(".card-color").addClass("bg-success");
+      } else if (co_num == 2) {
+        $(".card-color").addClass("bg-danger");
+      } else if (co_num == 3) {
+        $(".card-color").addClass("bg-info");
+      } else{
+        $(".card-color").addClass("bg-warning");
+      }  ;
+    });
+
+    $("#color-reset").on("click", function () {
+      $(".card-color").removeClass("bg-success");
+      $(".card-color").removeClass("bg-danger");
+      $(".card-color").removeClass("bg-info");
+      $(".card-color").removeClass("bg-warning");
+    });
+</script>
 {% endblock %}
