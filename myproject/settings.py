@@ -131,7 +131,7 @@ ALLOWED_HOSTS = ['booksreviews-test.herokuapp.com','127.0.0.1']
 
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'booksreviews/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEBUG = False
 
