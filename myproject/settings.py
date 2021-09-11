@@ -111,7 +111,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/booksreviews/static/'
+STATIC_URL = 'booksreviews/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -131,7 +131,7 @@ ALLOWED_HOSTS = ['booksreviews-test.herokuapp.com','127.0.0.1']
 
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-STATIC_ROOT = '/booksreviews/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'booksreviews/static')
 
 DEBUG = False
 
