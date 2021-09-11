@@ -25,15 +25,21 @@
             <a  href="{% url 'booksreviews:post_detail' item.id %}" type="button" class="btn btn-light-blue btn-md card-color">もっと読む</a>
             <br>
             <br>
+            <i class="fa fa-heart" style="color:pink;"></i>&nbsp;{{ item.like_count }}
+            <br>
           </div>
           <div class="card-footer">
             <small class="card-footer text-muted">by&nbsp;{{ item.author }}&nbsp; at&nbsp;{{ item.created_at.date }}&nbsp;</small>
+            <br>
           </div>
         </div>
       </div>
     {% endfor %}
     <br>
     <br>
+  </div>
+  <div class="row justify-content-center">
+    <a href="{% url 'booksreviews:post_list' %}" type="button" class="btn text-white col-4 ml-auto express" style="background-color:#36563C">全て表示</a>
   </div>
   <br>
 </section>

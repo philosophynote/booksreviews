@@ -29,6 +29,10 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def like_count(self):
+        n = Like.objects.filter(post = self).count()
+        return n
+
 class Like(models.Model):
     post = models.ForeignKey(Post,verbose_name="投稿" ,on_delete=models.PROTECT)
     user = models.ForeignKey(User,verbose_name="likeしたユーザー" ,on_delete=models.PROTECT)
