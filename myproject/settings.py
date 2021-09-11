@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -133,7 +133,7 @@ ALLOWED_HOSTS = ['booksreviews-test.herokuapp.com','127.0.0.1']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'booksreviews/static')
 
-# DEBUG = False
+DEBUG = False
 
 try:
     from .local_settings import *
