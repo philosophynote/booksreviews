@@ -123,7 +123,7 @@ LOGIN_URL = 'booksreviews:login'
 LOGIN_REDIRECT_URL = 'booksreviews:index'
 
 import dj_database_url
-DATABASES['default'].update(dj_database_url.config())
+DATABASES['default'] = dj_database_url.config(default ='postgres://thejxufbvvndkg:d07cfdb4316cccb1af3a9af2a029911f332bdde4fee32e7990b6fbec2466c581@ec2-52-7-159-155.compute-1.amazonaws.com:5432/d352v2t3kpltne')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FOWARDED_PROTO', 'https')
 
