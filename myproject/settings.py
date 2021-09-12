@@ -123,7 +123,7 @@ LOGIN_URL = 'booksreviews:login'
 LOGIN_REDIRECT_URL = 'booksreviews:index'
 
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'].update(dj_database_url.config())
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FOWARDED_PROTO', 'https')
 
