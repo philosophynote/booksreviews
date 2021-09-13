@@ -1,8 +1,8 @@
-<div class="pagination" style="background:radial-gradient( #4A593D,#36563C);">
+<div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
-            <a href="?page=1" class="text-white">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}" class="text-white">previous</a>
+            <a href="?page=1" class="text-black">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="text-black">previous</a>
         {% endif %}
 
         <span class="current">
@@ -10,8 +10,8 @@
         </span>
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}" class="text-white">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}" class="text-white">last &raquo;</a>
+            <a href="?page={{ page_obj.next_page_number }}" class="text-black">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="text-black">last &raquo;</a>
         {% endif %}
     </span>
 </div>

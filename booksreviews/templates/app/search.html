@@ -5,30 +5,35 @@
 <div class="row">
     <div class="col-md-9">
         <br>
-        <h2>検索結果</h2>
         <br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>タイトル</th>
-                    <th>内容</th>
-                    <th>作成日時</th>
-                    <th>更新日時</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- モデル名_listで自動的に渡される -->
-                {% for item in search_list %}
-                <tr>
-                    <td><a href="{% url 'booksreviews:post_detail' item.pk %}">{{item.title}}</a></td>
-                    <td>{{item.content}}</td>
-                    <td>{{item.created_at}}</td>
-                    <td>{{item.updated_at}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <br>
+        <div class="card">
+            <div class="card-header">
+                <h2>検索結果</h2>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="200px">タイトル</th>
+                            <th width="400px">内容</th>
+                            <th width="200px" >作成日時</th>
+                            <th width="200px">更新日時</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- モデル名_listで自動的に渡される -->
+                        {% for item in search_list %}
+                        <tr>
+                            <td><a href="{% url 'booksreviews:post_detail' item.pk %}" class="fw-bold text-decoration-underline">{{item.title}}</a></td>
+                            <td>{{item.content}}</td>
+                            <td>{{item.created_at}}</td>
+                            <td>{{item.updated_at}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 </div>
